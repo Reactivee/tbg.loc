@@ -1,7 +1,4 @@
 <p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
-    </a>
     <h1 align="center">TBG test task</h1>
     <br>
 </p>
@@ -13,6 +10,11 @@ there are 2 page.
 1. main page . For uploading
 2. form which you may write brief info
 
+for installing
+1. php init
+2. composer
+3. connect database
+4. php yii migrate
 
 DIRECTORY STRUCTURE
 -------------------
