@@ -11,7 +11,7 @@ use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 
-Yii::$app->name = 'TBG';
+Yii::$app->name = 'Theme';
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -37,7 +37,9 @@ AppAsset::register($this);
             ],
         ]);
         $menuItems = [
-            ['label' => 'Home', 'url' => ['/site/index']],
+
+            ['label' => 'Employ', 'url' => ['/employees']],
+            ['label' => 'Position', 'url' => ['/position']],
 
         ];
         echo Nav::widget([

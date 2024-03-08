@@ -1,16 +1,25 @@
 <p align="center">
-    <h1 align="center">TBG test task</h1>
+    <h1 align="center">Theme test task</h1>
     <br>
 </p>
 
-you can upload pdf file then you may select send button to send by email or tg
-you may write chat id or email. Automatically can be detect and will be send to which you wrote address
+Loyiha shundan iboratki: Ishxona xodimlarini tug'ilgan kunini eslatib turadigan bot.
 
-there are 2 page.
-1. main page . For uploading
-2. form which you may write brief info
+2 ta jadval bo'ladi, Lavozim va Xodimlar degan. Lavozimda lavozim nomlari bo'ladi xolos. Xodimlarda ism , familiya,
+rasmi va qachon tug'ilganligi haqida ma'lumotlari kirg'izilishi kerak
 
-for installing
+Bu yerda 2 ta sahifa
+
+1. Xodimlar /employees/index
+2. Lavozim  /position
+
+Xodimlar bo'limidan barcha xodimlarni tahrirlash ishlari amalga oshiriladi va telegram xabarnoma kimga ketishi haqida
+ham shu sahifadan boshqarsa bo'ladi. Test uchun telegram bot orqali sms jo'natish funksiyasi bor. Har kuni qachon sms ketishini server orqali hal qilish mumkin
+Kerakli baza ham faylga biriktirilgan.
+https://t.me/my_tbg_bot shu bot orqali start tugmasi bosiladi va har bir xodimlar chat idsi olinib bazaga yozilishi kerak
+
+O'rnatish.
+
 1. php init
 2. composer
 3. connect database

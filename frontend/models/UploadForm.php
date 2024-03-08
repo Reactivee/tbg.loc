@@ -19,28 +19,7 @@ class UploadForm extends Model
         ];
     }
 
-    public function upload()
-    {
-        if ($this->validate()) {
-            try {
-                $directory = "uploads";
-                if (!is_dir($directory)) {
-                    mkdir($directory, 0777, true);
-                    $handle = opendir($directory);
-                }
-                $generateName = uniqid();
-                $fileName = 'uploads/' . $generateName . '.' . $this->file->extension;
-                $this->file->saveAs($fileName);
-                return $fileName;
-            } catch (\Exception $e) {
-                Yii::$app->session->setFlash('error', $e->getMessage());
-                return false;
-            }
 
-        } else {
-            return false;
-        }
-    }
 
     public static function sendDocTg($model)
     {
@@ -89,39 +68,5 @@ class UploadForm extends Model
 
     }
 
-    // Assuming you have a controller action where you want to send the email
-    public static function sendEmailWithAttachment($model)
-    {
-
-        try {
-            // Path to the file you want to attach
-            $filePath = $model->file;
-
-            // Email details
-            $toEmail = $model->email_tg;
-            $subject = 'Email with Attachment';
-            $body = 'Please find the attached file.';
-
-            // Create a new Yii mail message
-            $message = Yii::$app->mailer->compose();
-
-            // Set email parameters
-            $message->setTo($toEmail);
-            $message->setSubject($subject);
-            $message->setTextBody($body);
-
-            // Attach the file
-            $message->attach($filePath);
-            // Send the email
-            if ($message->send()) {
-                return true;
-            }
-        } catch
-        (\Exception $e) {
-            return $e->getMessage();
-        }
-        return false;
-
-    }
 
 }
